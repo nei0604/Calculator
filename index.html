@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="calc-wrap">
+    <div class="calc" role="application" aria-label="Calculator">
+
+      <div class="display">
+        <div class="expr" id="expr" aria-live="polite"></div>
+        <div class="result" id="result" aria-live="polite" aria-atomic="true">0</div>
+      </div>
+
+      <div class="grid">
+        <button class="btn btn-clear" onclick="calc('AC')">AC</button>
+        <button class="btn btn-clear" onclick="calc('±')">±</button>
+        <button class="btn btn-clear" onclick="calc('%')">%</button>
+        <button class="btn btn-op"    onclick="calc('÷')">÷</button>
+
+        <button class="btn btn-num" onclick="calc('7')">7</button>
+        <button class="btn btn-num" onclick="calc('8')">8</button>
+        <button class="btn btn-num" onclick="calc('9')">9</button>
+        <button class="btn btn-op"  onclick="calc('×')">×</button>
+
+        <button class="btn btn-num" onclick="calc('4')">4</button>
+        <button class="btn btn-num" onclick="calc('5')">5</button>
+        <button class="btn btn-num" onclick="calc('6')">6</button>
+        <button class="btn btn-op"  onclick="calc('−')">−</button>
+
+        <button class="btn btn-num" onclick="calc('1')">1</button>
+        <button class="btn btn-num" onclick="calc('2')">2</button>
+        <button class="btn btn-num" onclick="calc('3')">3</button>
+        <button class="btn btn-op"  onclick="calc('+')">+</button>
+
+        <button class="btn btn-num btn-zero" onclick="calc('0')">0</button>
+        <button class="btn btn-num"          onclick="calc('.')">.</button>
+        <button class="btn btn-eq"           onclick="calc('=')">=</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

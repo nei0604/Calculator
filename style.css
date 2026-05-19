@@ -1,0 +1,203 @@
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f2ec;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── Wrapper ── */
+.calc-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* ── Calculator Container ── */
+.calc {
+  background: #ffffff;
+  border: 1px solid #dddbd2;
+  border-radius: 20px;
+  width: 300px;
+  padding: 20px;
+}
+
+/* ── Display ── */
+.display {
+  background: #eeecea;
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+  min-height: 88px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.expr {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #888780;
+  min-height: 18px;
+  word-break: break-all;
+  text-align: right;
+}
+
+.result {
+  font-family: 'Space Mono', monospace;
+  font-size: 36px;
+  font-weight: 700;
+  color: #2c2c2a;
+  letter-spacing: -1px;
+  word-break: break-all;
+  line-height: 1.1;
+}
+
+/* ── Button Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+/* ── Base Button ── */
+.btn {
+  font-family: 'Space Mono', monospace;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  height: 60px;
+  transition: transform 0.08s ease, background 0.1s ease;
+}
+
+.btn:active {
+  transform: scale(0.94);
+}
+
+/* ── Number Buttons ── */
+.btn-num {
+  background: #f1efe8;
+  color: #2c2c2a;
+  font-weight: 400;
+  border: 0.5px solid #d3d1c7;
+}
+
+.btn-num:hover {
+  background: #e3e1da;
+}
+
+/* ── Operator Buttons ── */
+.btn-op {
+  background: #eaf3de;
+  color: #3b6d11;
+  font-weight: 700;
+  border: 0.5px solid #c0dd97;
+}
+
+.btn-op:hover {
+  background: #c0dd97;
+}
+
+/* ── Equals Button ── */
+.btn-eq {
+  background: #3b6d11;
+  color: #eaf3de;
+  font-weight: 700;
+  border: none;
+}
+
+.btn-eq:hover {
+  background: #27500a;
+}
+
+/* ── Clear / Utility Buttons ── */
+.btn-clear {
+  background: #fcebeb;
+  color: #a32d2d;
+  font-weight: 700;
+  border: 0.5px solid #f7c1c1;
+}
+
+.btn-clear:hover {
+  background: #f7c1c1;
+}
+
+/* ── Zero Button (spans 2 columns) ── */
+.btn-zero {
+  grid-column: span 2;
+}
+
+/* ── Dark Mode ── */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a18;
+  }
+
+  .calc {
+    background: #2c2c2a;
+    border-color: #444441;
+  }
+
+  .display {
+    background: #1a1a18;
+  }
+
+  .expr {
+    color: #5f5e5a;
+  }
+
+  .result {
+    color: #f1efe8;
+  }
+
+  .btn-num {
+    background: #444441;
+    color: #f1efe8;
+    border-color: #5f5e5a;
+  }
+
+  .btn-num:hover {
+    background: #5f5e5a;
+  }
+
+  .btn-op {
+    background: #173404;
+    color: #c0dd97;
+    border-color: #3b6d11;
+  }
+
+  .btn-op:hover {
+    background: #27500a;
+  }
+
+  .btn-eq {
+    background: #639922;
+    color: #173404;
+  }
+
+  .btn-eq:hover {
+    background: #3b6d11;
+  }
+
+  .btn-clear {
+    background: #501313;
+    color: #f7c1c1;
+    border-color: #a32d2d;
+  }
+
+  .btn-clear:hover {
+    background: #791f1f;
+  }
+}
